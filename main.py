@@ -336,7 +336,7 @@ print(id(s1.Lap.brand), id(s1.Lap.model))  # Accessing nested class data
 s1.Lap.show()
 """
 
-
+"""
 # Inheritance
 # It is a mechanism that allows you to create a hierarchy of classes that share a set of properties and
 # methods by deriving a class from another class.
@@ -484,3 +484,4 @@ object3 = Statistics()
 object3.funcinfo()
 object3.funstatistics()
 object3.funcdata()
+"""
