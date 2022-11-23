@@ -1,6 +1,6 @@
 # if __name__ == '__main__':
 #     print('Python Core')
-# ---------------------21-11-22-----------------------
+
 # Class
 # A class is a user-defined blueprint or prototype from which objects are created.
 # Classes provide a means of bundling data and functionality together.
@@ -183,7 +183,6 @@ f1 = crobj()
 print("Program End")
 """
 
-# -----------------------22-11-22-----------------------------
 # Class-----
 """
 class Computer:
@@ -484,4 +483,121 @@ object3 = Statistics()
 object3.funcinfo()
 object3.funstatistics()
 object3.funcdata()
+
+
+
+# Encapsulation
+# It describes the idea of wrapping data and the methods that work on data within one unit.
+
+# Protected Members
+# Protected members (in C++ and JAVA) are those members of the class that cannot be accessed outside the class
+# but can be accessed from within the class and its subclasses.
+# To accomplish this in Python, just follow the convention by prefixing the name of the member by
+# a single underscore “_”.
+
+
+class Base:
+    def __init__(self):
+        # Protected member
+        self._a = 2
+
+
+class Derived(Base):
+    def __init__(self):
+        Base.__init__(self)
+        print("Calling protected member of base class: ",
+              self._a)
+
+        self._a = 3
+        print("Calling modified protected member outside class: ",
+              self._a)
+
+
+obj1 = Derived()
+
+obj2 = Base()
+
+print("Accessing protected member of obj1: ", obj1._a)
+
+print("Accessing protected member of obj2: ", obj2._a)
+"""
+
+
+"""    
+# Polymorphism
+# Having many forms
+# It means the same function name (but different signatures) being used for different types.
+# The key difference is the data types and number of arguments used in function.
+
+# Example - 1
+print(len("geeks"))
+print(len([10, 20, 30]))
+
+
+def add(x, y, z=0):
+    return x + y + z
+
+
+print(add(2, 3))
+print(add(4, 5, 6))
+
+# Polymorphism with class methods
+
+
+class India:
+
+    def capital(self):
+        print("New Delhi is the capital of India.")
+
+    def language(self):
+        print("Hindi is the most widely spoken language of India.")
+
+    def type(self):
+        print("India is a developing country.")
+
+
+class USA:
+
+    def capital(self):
+        print("Washington, D.C. is the capital of USA.")
+
+    def language(self):
+        print("English is the primary language of USA.")
+
+    def type(self):
+        print("USA is a developed country.")
+
+
+obj_ind = India()
+obj_usa = USA()
+for country in (obj_ind, obj_usa):
+    country.capital()
+    country.language()
+    country.type()
+"""
+# ------------------------------------------------------
+"""
+print("Some basic exercises")
+print("Program to check a palindrome number - ")
+# Exercise - 1
+
+num = int(input("Enter any number : "))
+temp = num
+rev = 0
+while num > 0:
+    dig = num % 10
+    rev = rev * 10 + dig
+    num = num // 10
+if temp == rev:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+# Exercise - 2
+print("Program to check a palindrome string - ")
+str = input("Enter any word - ")
+if str == str[::-1]:
+    print("The letter is a palindrome")
+else:
+    print("The letter is not a palindrome")
 """
