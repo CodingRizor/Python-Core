@@ -601,3 +601,122 @@ if str == str[::-1]:
 else:
     print("The letter is not a palindrome")
 """
+
+# ----------------------------------------------------------------------------------
+
+# Syntax error -
+# This error is caused by the wrong syntax in the code. It leads to the termination of the program.
+
+# Exceptions -
+# Exceptions are raised when the program is syntactically correct, but the code resulted in an error.
+# This error does not stop the execution of the program, however, it changes the normal flow of the program.
+
+# Example -
+marks = 29
+# print(marks/0)
+# This will show ZeroDivisionError
+
+# Example -2
+a = ('1', '2', '3')
+# print(a[3])
+# Tuple index out of range
+
+# To handle these errors - try and catch statements are used.
+# They used to catch and handle exceptions
+# Statements that can raise exceptions are kept inside the try clause
+# and the statements that handle the exception are written inside except clause.
+
+"""
+print("Enter first number - ")
+a = input()
+print("Enter second number - ")
+b = input()
+try:
+    print("The sum of 2 numbers is ",
+          int(a)+int(b))
+except Exception as e:
+    print(e)
+
+
+# There can be multiple exceptions in a program
+
+z = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(z)
+print("Enter any index number - ")
+try:
+    b = int(input())
+    print("Value at", b, "position is ", (z[b]))
+except ValueError:
+    print("Value Error - Please enter integer value only")
+except Exception as e:
+    print(e)
+
+
+# Try with else clause -
+# Use the else clause on the try-except block which must be present after all the except clauses.
+# The code enters the else block only if the try clause does not raise an exception.
+
+z = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(z)
+print("Enter any index number - ")
+try:
+    b = int(input())
+    print("Value at", b, "position is ", (z[b]))
+except Exception as e:
+    print(e)
+else:
+    print("Code successfully executed")  # This code will execute only if there is no exceptions raised.
+
+# Finally
+# Statements written in finally keyword is always executed after try and except blocks.
+# Final block always executes after normal termination of try block or after try block terminates due to some exception.
+
+    # Syntax:
+# try:
+#      Some Code....
+#
+# except:
+#      optional block
+#      Handling of exception (if required)
+#
+# else:
+#      execute if no exception
+#
+# finally:
+#     Some code .....(always executed)
+
+    print("-----------------------------")
+# Example -
+
+try:
+    k = 5 // 0
+    print(k)
+except ZeroDivisionError:
+    print("Can't divide by zero")
+finally:
+    print("Always executed")
+"""
+
+# NZEC (non zero exit code) 
+# occurs when your code is failed to return 0. When a code 
+# returns 0 it means it is successfully executed otherwise it will 
+# return some other number depending on the type of error.
+# Example -
+# n = int(input())
+# k = int(input())
+# print n," ",k
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
